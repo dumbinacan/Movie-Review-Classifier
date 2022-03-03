@@ -1,0 +1,18 @@
+vocab features, the words being checked to calc liklihood for index biz
+vocab negs, count of which features are used and how often in negative reviews
+vocab poss, same but with positive reviews. working title
+vocab tots, negs + poss
+import glob for wild card and multiple files opening glob.glob(path)
+########IDEA OF IMPLEMENTATION##############################
+
+preproc
+ space out tokens and to lower case everything. function for file, then a function that calls it on all files in given directory.
+NB
+ the bit about the model
+  given a vocab, features, and a file, count all the occurences of the features and insert them into the vocab
+   make function that calls it on all files in a given directory.
+  run function on neg and tots with with the neg reviews.
+  run function on pos and tots with with the pos reviews. //worry about tots after everything else is up and running
+ the bit about testing and predicting
+  feature vector of size features.len()
+   setting features as an index allows us to do something like featvec[featuers[feature]] to access a given feature
